@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ryan Norouzi</title>
+  <meta name="description" content="Ryan Norouzi is a high school senior in New Jersey who builds security software, including ModGuard, a free malware scanner for Minecraft mods.">
+  <meta property="og:title" content="Ryan Norouzi">
+  <meta property="og:url" content="https://ryannorouzi.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* Colors: ink on paper, plus lane-rope blue from the pool. See DESIGN.md. */
+    :root {
+      --paper: #fbfbf9;
+      --ink: #1a1a1a;
+      --quiet: #5c5c58;
+      --rule: #d9d9d4;
+      --lane: #0a4f94;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #121212;
+        --ink: #e6e6e2;
+        --quiet: #9c9c96;
+        --rule: #2e2e2c;
+        --lane: #7db4ee;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 18px/1.6 "Atkinson Hyperlegible", system-ui, sans-serif;
+    }
+    main { max-width: 680px; margin: 0 auto; padding: 72px 20px 40px; }
+    a { color: var(--lane); text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    h1 { font-size: 30px; line-height: 1.2; margin: 0 0 16px; }
+    h2 { font-size: 20px; margin: 0 0 12px; }
+    p { margin: 0 0 14px; }
+    .intro { font-size: 21px; line-height: 1.5; }
+    .contact-line { color: var(--quiet); }
+
+    section { margin-top: 56px; }
+
+    /* ModGuard gets more room than anything else on the page */
+    .modguard h2 { font-size: 26px; }
+    .modguard .figure { font-size: 21px; }
+
+    .log { list-style: none; margin: 0; padding: 0; }
+    .log li { display: grid; grid-template-columns: 7.5em 1fr; gap: 16px; margin-bottom: 18px; }
+    .log time { color: var(--quiet); }
+    .log p { margin: 0; }
+    .log strong { font-weight: 700; }
+
+    .small { font-size: 16px; color: var(--quiet); }
+
+    footer { max-width: 680px; margin: 0 auto; padding: 24px 20px 56px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--quiet); }
+
+    @media (max-width: 560px) {
+      main { padding-top: 48px; }
+      .log li { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <h1>Ryan Norouzi</h1>
+  <p class="intro">
+    I'm a senior at Bergen County Technical High School in New Jersey. I write security software.
+    Right now most of my time goes to ModGuard, a free scanner that checks Minecraft mods for malware before you install them.
+  </p>
+  <p class="contact-line">
+    <a href="Ryan_Norouzi_Resume.pdf">Resume (PDF)</a>,
+    <a href="https://github.com/RyanNorouzi">GitHub</a>,
+    <a href="https://www.linkedin.com/in/ryan-norouzi-931a95402">LinkedIn</a>,
+    or email <a href="mailto:ryannorouzi@icloud.com">ryannorouzi@icloud.com</a>.
+  </p>
+
+  <section class="modguard" id="modguard">
+    <h2>ModGuard</h2>
+    <p class="figure">As of October 2026, ModGuard has run more than 50,000 scans and flagged about 3,000 files.</p>
+    <p>
+      Minecraft mods are just Java archives, and some of them ship token stealers and remote access trojans.
+      ModGuard looks inside the file before it ever runs. I add detections based on what users send in.
+      It's at <a href="https://modguardprotection.com">modguardprotection.com</a>.
+    </p>
+    <ul class="log">
+      <li>
+        <time datetime="2026-10">Oct 2026</time>
+        <p>Passed 50,000 scans. Windows support is next.</p>
+      </li>
+      <li>
+        <time datetime="2026-07-16">Jul 2026</time>
+        <p>NJBIZ wrote about us in <a href="https://njbiz.com/njx-venture-summit-new-jersey-startup-ecosystem/">its NJx Venture Summit coverage</a>, after we pitched to investors at the summit in Skillman on July 8.</p>
+      </li>
+      <li>
+        <time datetime="2026-06">Jun 2026</time>
+        <p>Started ModGuard at the 24-hour NJx Summer Hackathon with classmates. It took first place.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="work">
+    <h2>Work and research</h2>
+    <ul class="log">
+      <li>
+        <time>Sep 2026 – now</time>
+        <p><strong>PQSecure Technologies</strong>, cybersecurity intern. Post-quantum cryptography libraries in C and Rust, and side-channel testing of the new NIST algorithms. I also help on an ARPA-H project that looks for crypto weaknesses in stripped binaries.</p>
+      </li>
+      <li>
+        <time>2025 – 2026</time>
+        <p><strong>NJ Cybersecurity &amp; Communications Integration Cell</strong>, intern. I watched intrusion alerts with the state's analysts and co-wrote <a href="https://www.cyber.nj.gov">public security bulletins</a> for New Jersey residents and businesses.</p>
+      </li>
+      <li>
+        <time>Summer 2026</time>
+        <p><strong>CUNY CREST, City College of New York</strong>. Trained a YOLO model to sort trash for a smart recycling bin; glass kept fooling it until we retrained it. It was on CUNY TV, and I'm presenting the poster at the AGU Fall Meeting in San Francisco this December.</p>
+      </li>
+      <li>
+        <time>Summer 2025</time>
+        <p><strong>NSF INSPIRE, Columbia &amp; CUNY</strong>. Measured heat on more than 110 NYC subway platforms and compared it with the street above.</p>
+      </li>
+      <li>
+        <time>2024 – 2025</time>
+        <p><strong>MITRE eCTF</strong>. Built a secure satellite TV decoder and medical device firmware in C, then spent the attack phase breaking other teams' designs.</p>
+      </li>
+      <li>
+        <time>Sep 2026</time>
+        <p><strong><a href="https://synchrobuilder.com">SynchroBuilder</a></strong>, an open-source Claude Code plugin that lets teammates coordinate sessions through Git, no server needed.</p>
+      </li>
+    </ul>
+    <p class="small">Everything else, including hackathons, robotics and the 2024 cryptography program at Florida Atlantic that got me into security, is on the <a href="Ryan_Norouzi_Resume.pdf">resume</a>.</p>
+  </section>
+
+  <section id="else">
+    <h2>Away from the keyboard</h2>
+    <p>
+      I've swum for the Ridgewood YMCA Breakers since 2016 and captain the team now, and I lifeguard at the same Y.
+      I've also played piano for twelve years, mostly Chopin, Liszt and Beethoven.
+    </p>
+  </section>
+
+</main>
+<footer>
+  Written by hand in HTML and CSS. Set in Atkinson Hyperlegible, a typeface the Braille Institute designed to stay readable for people with low vision.
+  Last updated <time datetime="2026-11-02">November 2, 2026</time>.
+</footer>
+</body>
+</html>
